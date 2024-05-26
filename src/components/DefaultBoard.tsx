@@ -1,11 +1,10 @@
 import { useEffect, useState } from "react";
 import "../stylesheets/DefaultBoard.css";
-
-const BASE = "http://localhost:3000/api/dashboard";
+import { BASE } from "../App";
 
 const fetchDashboards = async () => {
   try {
-    const response = await fetch(BASE, {
+    const response = await fetch(`${BASE}/api/dashboard`, {
       method: "GET",
       headers: {
         "content-type": "application/json",

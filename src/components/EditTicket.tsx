@@ -1,12 +1,11 @@
 import { useState } from "react";
 import { TTicket } from "./Ticket";
 import "../stylesheets/EditTicket.css";
-
-const BASE = "http://localhost:3000/api/ticket";
+import { BASE } from "../App";
 
 const updateTicket = async (newTicket: any) => {
   try {
-    const response = await fetch(`${BASE}/${newTicket._id}`, {
+    const response = await fetch(`${BASE}/api/ticket/${newTicket._id}`, {
       method: "PATCH",
       headers: {
         "content-type": "application/json",

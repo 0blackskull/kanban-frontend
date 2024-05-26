@@ -2,12 +2,13 @@ import { useEffect, useState } from "react";
 import Ticket from "./Ticket";
 
 import "../stylesheets/Dashboard.css";
-
-const BASE = "http://localhost:3000/api";
+import { BASE } from "../App";
 
 const getTickets = async (dashboard: string) => {
+  console.log(dashboard);
+
   try {
-    const response = await fetch(`${BASE}/tickets`, {
+    const response = await fetch(`${BASE}/api/tickets`, {
       method: "GET",
       credentials: "include",
     });

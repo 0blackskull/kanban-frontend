@@ -1,6 +1,6 @@
 import { Dispatch, SetStateAction, useContext, useState } from "react";
 import "../stylesheets/CreateTicket.css";
-import { UserContext } from "../App";
+import { BASE, UserContext } from "../App";
 
 type FormState = {
   id: string;
@@ -12,11 +12,9 @@ type FormState = {
   assignee: string;
 };
 
-const BASE = "http://localhost:3000/api";
-
 const createTicket = async (ticket: FormState) => {
   try {
-    const response = await fetch(`${BASE}/tickets`, {
+    const response = await fetch(`${BASE}/api/tickets`, {
       method: "POST",
       headers: {
         "content-type": "application/json",

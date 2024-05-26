@@ -3,6 +3,8 @@ import "./App.css";
 import Login from "./components/Login";
 import Layout from "./components/Layout";
 
+export const BASE = "https://kanban-tsx.netlify.app";
+
 type TUserContext = {
   user?: string;
   setUser: (id: any) => void;

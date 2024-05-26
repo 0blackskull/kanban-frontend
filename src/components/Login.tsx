@@ -1,22 +1,20 @@
 import { useContext, useRef } from "react";
-import { UserContext } from "../App";
+import { BASE, UserContext } from "../App";
 import owl from "../assets/owl.jpeg";
 
 import "../stylesheets/Login.css";
-
-const BASE = "http://localhost:3000/auth";
 
 const requestLogin = async (
   user: string | null = "",
   pwd: string | null = "werxrd"
 ) => {
   try {
-    const response = await fetch(`${BASE}/login`, {
+    const response = await fetch(`${BASE}/auth/login`, {
       method: "POST",
       headers: {
         "content-type": "application/json",
       },
-      body: JSON.stringify({ user: "Utk", pwd: "utk@CR330" }),
+      body: JSON.stringify({ user, pwd }),
       credentials: "include",
     });
 
@@ -37,7 +35,7 @@ const requestSignup = async (
   pwd: string | null = ""
 ) => {
   try {
-    const response = await fetch(`${BASE}/signup`, {
+    const response = await fetch(`${BASE}/auth/signup`, {
       method: "POST",
       headers: {
         "content-type": "application/json",
