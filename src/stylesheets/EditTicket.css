@@ -1,0 +1,65 @@
+#edit-ticket-container {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  font-size: 2vh;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: grid;
+  place-content: center;
+  justify-content: center;
+
+  select,
+  input {
+    display: inline-block;
+    font-size: 2vh;
+    padding: 1ch;
+    border-radius: 8px;
+  }
+
+  label {
+    display: inline-block;
+    width: 13ch;
+  }
+
+  textarea {
+    display: block;
+    font-size: 2vh;
+    margin-top: 2ch;
+    width: 50vh;
+    height: 15vh;
+  }
+
+  #edit-ticket {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    border: solid;
+
+    #close-ticket {
+      color: white;
+      background-color: #0b66e4;
+      aspect-ratio: 1;
+      margin-left: 95%;
+      margin-bottom: -5%;
+      display: inline-block;
+    }
+
+    .input-field {
+      margin: 2ch 0;
+    }
+
+    #edit-btn,
+    #save-btn {
+      color: white;
+      background-color: #0b66e4;
+      font-size: 2vh;
+      padding: 1ch;
+      border-radius: 1ch;
+    }
+  }
+}

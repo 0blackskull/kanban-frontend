@@ -1,0 +1,30 @@
+#defaultBoard {
+  padding: 1vw;
+}
+
+.tile-button {
+  display: inline-block;
+  padding: 2em 4em;
+
+  font-size: 2em;
+
+  background-color: #0052cc;
+
+  color: white;
+
+  border: none;
+
+  border-radius: 0.5em;
+
+  box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
+
+  text-align: center;
+
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.tile-button:hover {
+  background-color: #0041a3;
+  transform: translateY(-0.1em);
+}

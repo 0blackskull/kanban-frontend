@@ -1,0 +1,37 @@
+.ticket-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 85%;
+  padding: 20px;
+  margin: 5px;
+  transition: transform 0.2s;
+  border-style: solid;
+  display: inline-block;
+}
+
+.ticket-card:hover {
+  transform: translateY(-5px);
+}
+
+.ticket-title {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1.5em;
+  color: #333;
+}
+
+.ticket-description {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.ticket-details p {
+  margin: 5px 0;
+  color: #333;
+}
+
+.ticket-details p strong {
+  color: #555;
+}

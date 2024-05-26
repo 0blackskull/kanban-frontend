@@ -1,0 +1,37 @@
+#topbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  gap: 1vh;
+  font-size: 3vh;
+  flex-wrap: nowrap;
+  min-width: fit-content;
+
+  #logout {
+    margin-left: auto;
+  }
+
+  #create-ticket-btn {
+    color: white;
+    background-color: #0b66e4;
+  }
+
+  #options {
+    min-width: fit-content;
+  }
+
+  button {
+    background: none;
+    border: none;
+    font-size: 2vh;
+    padding: 1ch;
+    border-radius: 1ch;
+    font-family: inherit;
+  }
+
+  button:hover {
+    color: #0b66e4;
+    text-decoration: underline;
+  }
+}

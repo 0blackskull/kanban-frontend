@@ -1,0 +1,64 @@
+#login {
+  display: flex;
+  width: 100vw;
+  height: 80vh;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap-reverse;
+  gap: min(10ch, 5vw);
+  padding-top: 5ch;
+
+  #owl {
+    width: 50ch;
+  }
+
+  #loginForm {
+    width: 40ch;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: min(5ch, 10vw);
+  }
+
+  #form-buttons-wrapper {
+    display: flex;
+    justify-items: stretch;
+    gap: 1ch;
+  }
+
+  button {
+    flex-grow: 1;
+    background: none;
+  }
+
+  button:hover {
+    background-color: aqua;
+  }
+
+  button:first-child {
+    border-radius: 1ch 0 0 1ch;
+  }
+
+  button:nth-child(2) {
+    border-radius: 0 1ch 1ch 0;
+  }
+
+  input,
+  button {
+    font-size: 1.3rem;
+    padding: 0.5rem 0.25rem;
+  }
+
+  input {
+    border-radius: 1ch;
+    padding-left: 1ch;
+  }
+}
+
+#login-title {
+  width: 100%;
+  text-align: center;
+  font-family: monospace;
+  font-size: 2rem;
+}
