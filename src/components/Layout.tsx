@@ -8,7 +8,7 @@ function Layout() {
 
   return (
     <div>
-      <Topbar />
+      <Topbar setDashboard={setDashboard} />
       {!dashboard ? (
         <DefaultBoard setDashboard={setDashboard} />
       ) : (

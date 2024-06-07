@@ -1,9 +1,13 @@
-import { useContext, useState } from "react";
+import { Dispatch, SetStateAction, useContext, useState } from "react";
 import "../stylesheets/Topbar.css";
 import { UserContext } from "../App";
 import CreateTicket from "./CreateTicket";
 
-function Topbar() {
+function Topbar({
+  setDashboard,
+}: {
+  setDashboard: Dispatch<SetStateAction<any>>;
+}) {
   const userContext = useContext(UserContext);
   const [showCreateForm, setShowCreateForm] = useState(false);
 
@@ -11,7 +15,7 @@ function Topbar() {
     <div id="topbar">
       <div>KANBAN</div>
       <div id="options">
-        <button>Dashboards</button>
+        <button onClick={() => setDashboard(null)}>Dashboards</button>
         <button id="create-ticket-btn" onClick={() => setShowCreateForm(true)}>
           Create
         </button>
