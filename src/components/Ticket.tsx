@@ -30,7 +30,6 @@ function Ticket(params: { ticket: TTicket }) {
       )}
       <div className="ticket-card" onClick={() => setShowEdit(true)}>
         <h2 className="ticket-title">{params?.ticket?.title}</h2>
-        <p className="ticket-description">{params?.ticket?.description}</p>
         <div className="ticket-details">
           <p>
             <strong>Assigned To: </strong>

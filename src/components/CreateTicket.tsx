@@ -4,7 +4,7 @@ import { BASE, UserContext } from "../App";
 
 type FormState = {
   id: string;
-  user?: string;
+  createdBy?: string;
   status: string;
   priority: string;
   description: string;
@@ -45,6 +45,7 @@ function CreateTicket({
     description: "",
     title: "",
     assignee: "",
+    createdBy: userContext?.user,
   });
 
   const handleChange = (
