@@ -23,19 +23,19 @@ const getTickets = async (dashboard: string) => {
   }
 };
 
-function Dashboard(params: any) {
+function Dashboard(props: any) {
   const [data, setData] = useState<any>(null);
 
   useEffect(() => {
-    if (!params.dashboard) return;
+    if (!props.dashboard) return;
 
     const fetchData = async () => {
-      const res = await getTickets(params.dashboard);
+      const res = await getTickets(props.dashboard);
       setData(res);
     };
 
     fetchData();
-  }, [params.dashboard]);
+  }, [props.dashboard, props.refresh]);
 
   const status = ["Backlog", "Dev", "Testing", "Released"];
 

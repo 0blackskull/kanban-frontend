@@ -14,7 +14,7 @@ export type TTicket = {
   priority: string;
 };
 
-function Ticket(params: { ticket: TTicket }) {
+function Ticket(params: any) {
   const [showEdit, setShowEdit] = useState(false);
 
   return (

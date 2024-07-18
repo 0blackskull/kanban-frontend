@@ -31,11 +31,7 @@ const createTicket = async (ticket: FormState) => {
   }
 };
 
-function CreateTicket({
-  setShowCreateForm,
-}: {
-  setShowCreateForm: Dispatch<SetStateAction<boolean>>;
-}) {
+function CreateTicket(props: any) {
   const userContext = useContext(UserContext);
 
   const [formState, setFormState] = useState<FormState>({
@@ -71,12 +67,14 @@ function CreateTicket({
 
     createTicket(newTicket);
 
-    setShowCreateForm(false);
+    props.setRefreshDashboard(props.refreshDashboard + 1);
+
+    props.setShowCreateForm(false);
   };
 
   return (
     <form id="create-ticket" onSubmit={handleSubmit}>
-      <button id="close-form" onClick={() => setShowCreateForm(false)}>
+      <button id="close-form" onClick={() => props.setShowCreateForm(false)}>
         X
       </button>
       <div>
