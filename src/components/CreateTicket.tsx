@@ -1,4 +1,4 @@
-import { Dispatch, SetStateAction, useContext, useState } from "react";
+import { useContext, useState } from "react";
 import "../stylesheets/CreateTicket.css";
 import { BASE, UserContext } from "../App";
 
